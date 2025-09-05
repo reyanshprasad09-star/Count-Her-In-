@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Count Her In!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button id="music-toggle">Play Music</button>
+    <audio id="background-music" src="music.mp3"></audio>
+    <div id="start-screen">
+        <button id="theme-toggle">Switch to Dark Mode</button>
+        <h1>Count Her In!</h1>
+        <h2>India's Sex Ratio Quiz</h2>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" style="display: none;">
+        <button id="theme-toggle-quiz">Switch to Dark Mode</button>
+        <div class="quiz-box">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="answer"></div>
+        </div>
+    </div>
+
+    <div id="score-screen" style="display: none;">
+        <button id="theme-toggle-score">Switch to Dark Mode</button>
+        <h1 id="score-title">SCORE</h1>
+        <div class="quiz-box">
+            <div id="score-value"></div>
+            <div id="score-message"></div>
+            <button id="back-home">Return to Home</button>
+        </div>
+    </div>
+</body>
+</html>
