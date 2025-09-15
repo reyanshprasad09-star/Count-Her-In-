@@ -165,10 +165,10 @@ document.addEventListener('DOMContentLoaded', () => {
           "Kerala",
           "Tamil Nadu",
           "Andhra Pradesh",
-          "Both a and b"
+          "Chhattisgarh"
         ],
-        answer: 3,
-        explanation: "Kerala (1084) and Tamil Nadu (996, nearly 1000) were top performers, while most states had below-1000 sex ratios."
+        answer: 0,
+        explanation: "Kerala had a sex ratio of 1084, which was above 1000. Tamil Nadu (996), Andhra Pradesh (993), and Chhattisgarh (991) all had sex ratios below 1000."
       }
     ];
 
@@ -660,4 +660,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 }); 
-
