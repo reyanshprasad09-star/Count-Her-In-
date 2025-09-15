@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Count Her In!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button id="music-toggle">Play Music</button>
+    <audio id="background-music" src="music.mp3"></audio>
+    <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="wrong.mp3" preload="auto"></audio>
+    <audio id="game-over-sound" src="game over.mp3" preload="auto"></audio>
+    
+    <!-- Confetti Container -->
+    <div id="confetti-container" class="confetti-container" style="display: none;"></div>
+    
+    <div id="start-screen">
+        <button id="theme-toggle">Switch to Dark Mode</button>
+        <h1>Count Her In!</h1>
+        <h2>India's Sex Ratio Quiz</h2>
+        <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" style="display: none;">
+        <button id="theme-toggle-quiz">Switch to Dark Mode</button>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="quiz-info">
+                <div class="progress-text" id="progress-text">Question 1 of 5</div>
+                <div class="lives-container">
+                    <div class="lives-label">Lives:</div>
+                    <div class="lives-display" id="lives-display">
+                        <span class="life-heart">❤️</span>
+                        <span class="life-heart">❤️</span>
+                        <span class="life-heart">❤️</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timer-container">
+                <div class="timer-circle">
+                    <div class="timer-text" id="timer-text">15</div>
+                </div>
+                <div class="timer-label">seconds left</div>
+            </div>
+        </div>
+        <div class="quiz-box">
+            <div id="question"></div>
+            <div id="options"></div>
+            <div id="answer"></div>
+        </div>
+    </div>
+
+    <div id="calculating-screen" style="display: none;">
+        <button id="theme-toggle-calculating">Switch to Dark Mode</button>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill-calculating"></div>
+            </div>
+            <div class="progress-text" id="progress-text-calculating">Completed 5 of 5</div>
+        </div>
+        <div class="calculating-box">
+            <div class="calculating-animation">
+                <div class="spinner"></div>
+                <h2 id="calculating-text">Calculating Results...</h2>
+                <p class="calculating-subtext">Analyzing your answers</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="score-screen" style="display: none;">
+        <button id="theme-toggle-score">Switch to Dark Mode</button>
+        <h1 id="score-title">SCORE</h1>
+        <div class="quiz-box">
+            <div id="score-value"></div>
+            <div id="score-message"></div>
+            <button id="back-home">Return to Home</button>
+        </div>
+    </div>
+</body>
+</html>
