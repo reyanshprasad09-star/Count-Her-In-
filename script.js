@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
           "Uttar Pradesh"
         ],
         answer: 2,
-        explanation: "Jammu & Kashmir improved its sex ratio by 55 points (from 892 in 2001 to 947 in 2011), the highest improvement among all states."
+        explanation: "Jammu & Kashmir improved its sex ratio by 55 (from 892 in 2001 to 947 in 2011), the highest improvement among all states."
       },
       {
         question: "As per 2011 Census, India's child sex ratio (0–6 years) was:",
@@ -660,3 +660,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 }); 
+
