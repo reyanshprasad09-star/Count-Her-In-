@@ -723,53 +723,247 @@ h2 {
   text-shadow: 4px 4px 8px rgba(255,255,255,0.1);
 }
 
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-  .quiz-box, #score-screen .quiz-box {
-    min-width: 320px;
-    width: 95%;
-    padding: 15px;
-    margin-top: 200px;
+/* Responsive Design - Mobile First Approach */
+
+/* Base styles already optimized for mobile */
+
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
   }
   
-  .calculating-box {
-    margin-top: 120px;
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .quiz-box, #score-screen .quiz-box {
+    width: 85%;
+    max-width: 600px;
+    padding: 25px;
+    margin-top: 150px;
+  }
+  
+  .question {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  
+  .option {
+    padding: 12px 18px;
+    font-size: 1rem;
+    margin: 8px 0;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  
+  .progress-container {
+    width: 85%;
+    padding: 12px 20px;
+  }
+  
+  #score-title {
+    font-size: 4.5rem;
   }
   
   #score-value {
     font-size: 1.8rem;
   }
-  
-  #score-title {
-    font-size: 5rem;
-    letter-spacing: 4px;
-  }
 }
 
+/* Mobile styles */
 @media (max-width: 480px) {
-  .quiz-box, #score-screen .quiz-box {
-    min-width: 280px;
-    width: 95%;
+  body {
     padding: 10px;
-    margin-top: 220px;
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .quiz-box, #score-screen .quiz-box {
+    width: 95%;
+    max-width: none;
+    padding: 15px;
+    margin-top: 80px;
+    min-height: auto;
+  }
+  
+  .question {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+    margin: 6px 0;
+    border-radius: 8px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    margin: 8px 5px;
+    min-width: 80px;
   }
   
   .progress-container {
     width: 95%;
     padding: 10px 15px;
+    margin-top: 60px;
+  }
+  
+  .progress-bar {
+    height: 6px;
+  }
+  
+  .timer {
+    font-size: 1.2rem;
+    padding: 8px 15px;
+  }
+  
+  .lives-container {
+    margin: 10px 0;
+  }
+  
+  .lives-container span {
+    font-size: 0.9rem;
   }
   
   .calculating-box {
-    margin-top: 140px;
-  }
-  
-  #score-value {
-    font-size: 1.5rem;
+    margin-top: 100px;
+    padding: 20px;
   }
   
   #score-title {
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  
+  #score-value {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .explanation {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 12px;
+    margin-top: 15px;
+  }
+  
+  /* Music controls for mobile */
+  .music-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+  }
+  
+  .music-controls button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* Dark mode toggle for mobile */
+  .dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* Confetti adjustments for mobile */
+  .confetti {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  h2 {
+    font-size: 1rem;
+  }
+  
+  .quiz-box, #score-screen .quiz-box {
+    padding: 12px;
+    margin-top: 60px;
+  }
+  
+  .question {
+    font-size: 1rem;
+  }
+  
+  .option {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin: 5px 3px;
+  }
+  
+  #score-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  #score-value {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .quiz-box, #score-screen .quiz-box {
+    margin-top: 40px;
+    padding: 15px;
+  }
+  
+  .progress-container {
+    margin-top: 30px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .calculating-box {
+    margin-top: 60px;
   }
 }
 
